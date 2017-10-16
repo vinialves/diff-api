@@ -189,7 +189,8 @@ target\jacoco-ut\index.html
 It was used log4j2 in the application in order to generate logs.  
 Initially only two log files were configurated in the log4j2.xml:  
 ```
-logs\diff_api.log and logs\springboot.log.
+logs\diff_api.log  
+logs\springboot.log
 ```
 The log level for these respective logs can also be configured in the log4j2.xml.  
 The default log level for both logs is INFO.  
@@ -200,7 +201,6 @@ These logs are generated in the logs folder.
 * For this initial version, scalability is not the major requirement,  
 so data persistence also is not a requirement. The application keeps the diffs in memory.   
 If data persistence becomes a requirement, the data can  be easily persisted in any desired database.  
-
 Thinking about scalability, if the use of the application grows,  
 probably is a good idea to have the data persisted and return the id  
 of request in order to track the diff operation.  
