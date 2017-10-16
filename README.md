@@ -198,15 +198,16 @@ These logs are generated in the logs folder.
 
 ## Some assumptions
 
-* For this initial version, scalability is not the major requirement,  
-so data persistence also is not a requirement. The application keeps the diffs in memory.   
-If data persistence becomes a requirement, the data can  be easily persisted in any desired database.  
+* For this initial version, data persistence is not a major requirement,  
+The application keeps the diffs in memory. If data persistence becomes a  
+requirement (for example if the system need to be more fail-proof)  
+the data can  be easily persisted in any desired database.  
+
+* For this initial version, scalability is not a major requirement.  
 Thinking about scalability, if the use of the application grows,  
-probably is a good idea to have the data persisted and return the id  
-of request in order to track the diff operation.  
-Design patterns like Factory could be  used in order to create the tasks   
-for different operations like addLeft, addRight, getDiff among others.   
-See below (in the possible improvements) more ideas related to scalability.  
+probably is a good idea return an request id in order to track the diff operation.  
+   
+* See below (in the possible improvements) more ideas about these subjects.  
 
 ## Possible Improvements
 
@@ -217,14 +218,18 @@ diff or a diff with incomplete data (missing left or right).
 * Improve the insight in where the diffs are, maybe providing  
 more information than just the byte index and the number of different bits.  
 
-* Data persistence (if it is a requirement).  
+* Data persistence. It would become a requirement if the system need to be morefail-proof.  
 
 * If scalability becomes a requirement, this application was made using spring boot  
 which is powerfull to build microservices. The microservices architecture can be considered,   
 for example, using Docker to manage the packaging of the microservice in a container  
 and Kubernetes in order to have load balancing and scaling.  
+As mentioned above, the response could be an request id in order to track the tasks.  
+Design patterns like Factory could be used in order to create the tasks  
+for different operations like addLeft, addRight, getDiff among others.  
 
 * Add more logs.  
+
 
 ## Authors
 
