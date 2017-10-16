@@ -198,7 +198,7 @@ These logs are generated in the logs folder.
 
 ## Some assumptions
 
-* For this initial version, data persistence is not a major requirement,  
+* For this initial version, data persistence is not a major requirement.  
 The application keeps the diffs in memory. If data persistence becomes a  
 requirement (for example if the system need to be more fail-proof)  
 the data can  be easily persisted in any desired database.  
@@ -218,7 +218,7 @@ diff or a diff with incomplete data (missing left or right).
 * Improve the insight in where the diffs are, maybe providing  
 more information than just the byte index and the number of different bits.  
 
-* Data persistence. It would become a requirement if the system need to be morefail-proof.  
+* Data persistence. It would become a requirement if the system need to be more fail-proof.  
 
 * If scalability becomes a requirement, this application was made using spring boot  
 which is powerfull to build microservices. The microservices architecture can be considered,   
